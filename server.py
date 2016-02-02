@@ -32,7 +32,7 @@ class TestData(Resource):
             {'name': 'Kevin', 'age': 25},
         ]
 
-rest.add_resource(TestData, '/')
+rest.add_resource(TestData, '/test')
 
 # Flask
 
@@ -40,7 +40,7 @@ app = Flask(__name__, static_url_path=None, static_folder=None)
 app.debug = True
 # add blueprint
 app.register_blueprint(website)
-app.register_blueprint(api, url_prefix='/api/v1/test')
+app.register_blueprint(api, url_prefix='/api/v1')
 
 if __name__ == '__main__':
     app.run('0.0.0.0', 1337)
