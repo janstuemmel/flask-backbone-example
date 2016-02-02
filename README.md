@@ -23,6 +23,8 @@ npm start # this starts a python wsgi server and the grunt watch task
 ## Deploy on Heroku
 
 ```sh
+# install client
+wget -O- https://toolbelt.heroku.com/install-ubuntu.sh | sh
 # register at heroku.com
 heroku login  
 heroku create
