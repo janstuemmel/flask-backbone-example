@@ -27,8 +27,8 @@ gulp.task('build:html', function() {
 gulp.task('build', ['build:js', 'build:html']);
 
 gulp.task('watch', ['build'], function() {
-    gulp.watch(appDir + '/**/*.js', ['build:js'])
-    gulp.watch(appDir + '/**/*.html', ['build:html'])
+    gulp.watch(appDir + '/app.js', ['build:js'])
+    gulp.watch(appDir + '/index.html', ['build:html'])
 });
 
 gulp.task('default', ['watch']);
