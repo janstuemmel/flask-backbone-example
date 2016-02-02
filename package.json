@@ -1,26 +1,30 @@
 {
-  "name": "python-flask-backbone-example",
+  "name": "flask-backbone-example",
   "version": "0.0.1",
   "description": "A simple python flask, backbone, gulp, browserify example application",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "post-install": "virtualenv env && env/bin/pip install -r requirements.txt",
-    "start": "concurrent 'env/bin/python server.py' 'npm run grunt'"
+    "gulp": "gulp",
+    "start": "concurrent 'env/bin/python server.py' 'npm run gulp'"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/janstuemmel/python-backbone-example.git"
+    "url": "git://github.com/janstuemmel/flask-backbone-example.git"
   },
   "keywords": [
     "python",
+    "flask",
+    "flask-restful"
     "backbone",
     "gulp",
-    "browserify"
+    "browserify",
+    "pushState"
   ],
   "author": "Jan Stümmel",
   "license": "BSD-2-Clause",
   "bugs": {
-    "url": "https://github.com/janstuemmel/python-backbone-example/issues"
+    "url": "https://github.com/janstuemmel/flask-backbone-example/issues"
   },
   "devDependencies": {
     "gulp": "~3.9.0",
