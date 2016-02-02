@@ -27,8 +27,8 @@ var View = Backbone.View.extend({
 
     render: function(){
         var test = this.collection.toJSON();
-        var template = this.template({items: test})
-        this.$el.html(template)
+        var template = this.template({items: test});
+        this.$el.html(template);
     }
 });
 
@@ -45,11 +45,11 @@ var Router = Backbone.Router.extend({
     },
 
     home: function() {
-        new View({el: '#main'})
+        new View({el: '#main'});
     },
 
     test: function() {
-        document.write('Its the test route!')
+        document.write('Its the test route!!')
     },
 
     notFound: function() {
