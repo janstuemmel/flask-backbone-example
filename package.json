@@ -16,7 +16,7 @@
   "keywords": [
     "python",
     "flask",
-    "flask-restful"
+    "flask-restful",
     "backbone",
     "gulp",
     "browserify",
