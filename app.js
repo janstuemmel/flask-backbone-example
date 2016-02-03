@@ -67,4 +67,5 @@ var Router = Backbone.Router.extend({
     }
 });
 
-router = new Router;
+// initialize app
+new Router;
