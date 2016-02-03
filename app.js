@@ -13,7 +13,7 @@ var Collection = Backbone.Collection.extend({
 
 var View = Backbone.View.extend({
 
-    template: Handlebars.compile('<ul>{{#each items}}<li>Name: {{name}}, Age: {{age}}</li>{{/each}}</ul>'),
+    template: Handlebars.compile('<a href="#" route="/test">Test</a><ul>{{#each items}}<li>Name: {{name}}, Age: {{age}}</li>{{/each}}</ul><a href="https://example.com">Example.com</a>'),
 
     initialize: function() {
         this.collection = new Collection;
@@ -41,20 +41,30 @@ var Router = Backbone.Router.extend({
     },
 
     initialize: function() {
+
         Backbone.history.start({pushState: true, root: '/'});
+
+        // routing a hrefs with attribute 'route'
+        $(document).on('click', 'a[route^="/"]', function (event) {
+            event.preventDefault();
+            Backbone.history.navigate( $(this).attr('route'), true);
+        });
     },
 
     home: function() {
+        console.log("home route");
         new View({el: '#main'});
     },
 
     test: function() {
-        document.write('Its the test route!!')
+        console.log("test route");
+        $('#main').html('Its the test route!!');
     },
 
     notFound: function() {
-        document.write('404, site not found!')
+        console.log(404);
+        $('#main').html('404, site not found!');
     }
 });
 
-new Router;
+router = new Router;
